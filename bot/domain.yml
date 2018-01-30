@@ -1,0 +1,46 @@
+slots:
+  PSAID:
+    type: text
+  email:
+    type: text
+  password:
+    type: text
+
+intents:
+  - greet
+  - goodbye 
+  - request_for_password_reset
+  - inform_password
+  - inform_PSAID
+  - inform_email
+
+entities:
+ - PSAID
+ - email
+ - password
+
+templates:
+  utter_greet:
+  - text: "I'm Jenny, how can i help you?"
+  - text: "I'm Jenny, how may i help you?"
+
+  utter_email:
+  - text: "Please enter your Email."
+
+  utter_PSAID:
+  - text: "Please enter your PSAID."
+
+  utter_password:
+  - text: "Please enter your new password."
+
+  utter_goodbye:
+  - text: "You password is changed. Goodbye, have a great day!"
+
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_email
+  - utter_PSAID
+  - utter_password
+  - bot.ActionPasswordReset
